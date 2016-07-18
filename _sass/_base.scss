@@ -1,4 +1,32 @@
 /**
+    * MIXINS FONTS
+**/
+@mixin font-face($family, $file, $weight) {
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    src: url('../fonts/'+ $family + '/' + $file + '.eot');
+    src: url('../fonts/'+ $family + '/' + $file + '.eot?#iefix') format('embedded-opentype');
+    src: url('../fonts/'+ $family + '/' + $file + '.svg') format('svg');
+    src: url('../fonts/'+ $family + '/' + $file + '.ttf') format('truetype');
+    src: url('../fonts/'+ $family + '/' + $file + '.woff') format('woff');
+}
+
+/**
+    * FONT FACE
+**/
+@font-face {
+    @include font-face('Opensans', 'OpenSans-Light-webfont', 'normal')
+}
+
+@font-face {
+    @include font-face('Clementine', 'ClementePDaa-Hairline', 'normal')
+}
+
+@font-face {
+    @include font-face('Existence', 'Existence-Light-webfont', 'normal')
+}
+/**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,

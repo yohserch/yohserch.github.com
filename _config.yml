@@ -7,6 +7,7 @@
 
 # Site settings
 title: Webkoding
+subtitle: Tutoriales de programación y más
 email: def.serch@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -19,3 +20,5 @@ github_username:  yohserch
 
 # Build settings
 markdown: kramdown
+sass:
+  style: :compressed
