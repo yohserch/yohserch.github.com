@@ -3,21 +3,35 @@ layout: default
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    <article class="article">
+      <div class="article-header">
+        <div class="circle">
+            <img src="assets/img/icons/{{post.category}}.png" alt="Python" width="30px">{{post.category}}
+        </div>
+      </div>
+      <div class="content">
+          <div class="article-title">
+              <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+              <div class="info-post">por Sergio Durán</div>
+              <div class="info-post"><img src="assets/img/icons/calendar.png" alt="date">{{post.date | date: "%b %-d, %Y"}}</div>
+              <div class="info-post"><img src="assets/img/icons/folder.png" alt="folder">{{post.category}}</div>
+              <div class="info-post"><img src="assets/img/icons/comments.png" alt="comments">0 comentarios</div>
+              <div class="info-post"><img src="assets/img/icons/tag.png" alt="tags">{{post.tags}}</div>
+          </div>
+          <img src="assets/img/rest.png" alt="Rest">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </article>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>

@@ -4,15 +4,15 @@
 
 header {
     background-color: rgb(26, 26, 26);
-    background-image: url('../img/icons/pattern.png');
+    background-image: url('../img/patterns/pattern.png');
     border-bottom: 2px solid rgb(240, 240, 240);
     color: rgb(228, 228, 228);
     display: block;
-    font-family: "Clementine";
     font-weight: normal;
-    padding-bottom: .3em;
-    padding-top: 1em;
+    padding-bottom: .5em;
+    // padding-top: .5em;
     text-align: center;
+    margin-bottom: 1em;
 
     img#logo {
         display: block;
@@ -23,9 +23,11 @@ header {
     h1, h2 {
         font-weight: lighter;
         margin: 0;
+        padding: 0;
     }
     h1 {
         font-size: 4em;
+        font-family: "Clementine";
         a {
             text-decoration: none;
             color: white;
@@ -41,8 +43,8 @@ header {
     
     h2 {
         font-size: 1em;
-        letter-spacing: 1px;
-        padding-top: .2em;
+        font-family: "Existence";
+        margin-top: -.8em;
     }
     nav {
         border-top: 1px solid rgb(80, 80, 80);
@@ -56,7 +58,7 @@ header {
             margin-bottom: 0px;
             
             li.menu-item, li.menu-item span {
-                vertical-align: top;
+                vertical-align: middle;
             }
             
             li.menu-item {
@@ -66,10 +68,11 @@ header {
                 a {
                     color: rgb(228, 228, 228);
                     text-decoration: none;
+                    font-size: 1.1em;
                 }
                 img {
                     width: 25px;
-                    margin-right: .3em;
+                    margin-right: .5em;
                 }
             }
             input#search-box {
@@ -91,5 +94,136 @@ header {
                 }
             }
         }
+    }
+}
+
+/*
+    Site articles
+*/
+
+section#page-content {
+	width: 68%;
+	border-right: 1px;
+	border-style: solid;
+	-webkit-border-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgb(80,80,80), rgba(0,0,0,0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgb(80,80,80), rgba(0,0,0,0)) 1 100%;
+    border-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgb(80,80,80), rgba(0,0,0,0)) 1 100%;
+}
+
+section#page-info {
+	width: 31%;
+	margin: 0 auto;
+
+	div.tarjeta {
+		border-radius: 5px;
+		margin: 0em .5em 1em .5em;
+		box-shadow: rgba(80,80,80,.5) 1px 1px 2px;
+
+		div.tarjeta-title {
+			background: rgb(215,65,66);
+			border-radius: 2px 2px 0px 0px;
+			color: rgb(248,248,248);
+			font-family: "Existence";
+			font-weight: lighter;
+			font-size: 1.2em;
+			padding: .8em;
+			text-shadow: 1px 1px 2px rgba(28,28,28,1);
+
+			img {
+				width: 20px;
+				margin-right: .1em;
+			}
+		}
+
+		div.tarjeta-content {
+			background: rgb(243, 243, 243);
+			border-radius: 0px 0px 0px 2px 2px;
+			padding: 1em;
+
+			img.social-icon {
+				width: 50px;
+				margin: 0px 1em 0px 1em;
+			}
+		}
+	}
+}
+
+section#page-content, section#page-info {
+	display: inline-block;
+	margin-top: 1em;
+	vertical-align: top;
+}
+
+article.article {
+    margin-left: 1em;
+    margin-right: 1em;
+    box-shadow: rgba(80,80,80,.5) 1px 1px 2px;
+
+    div.article-header {
+    	height: 4em;
+    	background-color: rgb(27,188,155);
+
+    	div.circle {
+    		width: 65px;
+    		height: 65px;
+    		background: rgb(27, 188, 155);
+    		border-radius: 100px;
+    		color: rgb(248, 248, 248);
+    		padding: 5px;
+    		margin: auto;
+    		top: 1.5em;
+    		position: relative;
+    		border: .5em solid rgb(243,243,243);
+    		text-align: center;
+    		font-size: .9em;
+    		overflow: hidden;
+    		img {
+    			width: 40px;
+    			display: block;
+    			margin: 0 auto;
+    			padding: 0;
+    		}
+    	}
+    }
+
+    div.content {
+    	background-color: rgb(243,243,243);
+    	padding: 1em;
+    	padding-top: 2em;
+    	font-family: "Opensans";
+    	font-size: 1.1em;
+		
+		img {
+			margin-right: 1em;
+			margin-bottom: 1em;
+			width: 50%;
+			float: left;
+		}
+    	div.article-title {
+    		border-width: 0 0 1px 0;
+    		border-style: solid;
+    		-webkit-border-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgb(80,80,80), rgba(0,0,0,0)) 100% 1;
+    		-moz-border-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgb(80,80,80), rgba(0,0,0,0)) 100% 1;
+    		border-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgb(80,80,80), rgba(0,0,0,0)) 100% 1;
+			margin-bottom: .5em;
+
+			h2 {
+				font-family: "Existence";
+				font-size: 2em;
+				padding: 0;
+				margin: 0;
+			}
+
+			div.info-post {
+				font-size: 14px;
+				margin-right: 1em;
+				display: inline-block;
+
+				img {
+					width: 15px;
+					margin-right: 3px;
+				}
+			}
+    	}
     }
 }

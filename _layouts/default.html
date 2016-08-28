@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
+    
+    {% include head.html %}
 
-  {% include head.html %}
+    <body>
 
-  <body>
+        {% include header.html %}
 
-    {% include header.html %}
+        <section id="page-content">
+            {{ content }}
+        </section>
+  
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+        <section id="page-info">
+            <div class="tarjeta">
+                <div class="tarjeta-title">Acerca de mi</div>
+                <div class="tarjeta-content">
+                    
+                </div>
+            </div>
 
-    {% include footer.html %}
+            <div class="tarjeta">
+                <div class="tarjeta-title">Sigueme en:</div>
+                <div class="tarjeta-content">
+                    <a href="#"><img src="assets/img/icons/facebook500.png" alt="" class="social-icon"></a>
+                    <a href="#"><img src="assets/img/icons/github.png" alt="" class="social-icon"></a>
+                    <a href="#"><img src="assets/img/icons/twitter.png" alt="" class="social-icon"></a>
+                    <a href="#"><img src="assets/img/icons/googleplus.png" alt="" class="social-icon"></a>
+                </div>
+            </div>
+        </section>
+        
+
+        {% include footer.html %}
 
   </body>
 

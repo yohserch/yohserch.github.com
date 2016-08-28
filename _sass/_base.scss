@@ -36,7 +36,11 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 /**
  * Basic styling
@@ -44,13 +48,17 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
-    background-color: $background-color;
+    background-color: rgb(220,220,220);
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    font-family: "Opensans";
+    font-weight: lighter;
+    font-size: 16px;
+    width: 100%;
 }
 
 
